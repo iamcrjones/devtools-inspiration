@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Inspirational Quote Extension",
+  "version": "1.0",
+  "description": "Prints an inspirational quote to the console when DevTools is opened.",
+  "permissions": ["devtools_page", "tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
